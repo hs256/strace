@@ -731,6 +731,9 @@ extern void ts_add(struct timespec *, const struct timespec *, const struct time
 extern void ts_sub(struct timespec *, const struct timespec *, const struct timespec *);
 extern void ts_mul(struct timespec *, const struct timespec *, int);
 extern void ts_div(struct timespec *, const struct timespec *, int);
+extern void
+decode_netlink_kobject_uevent(struct tcb *, kernel_ulong_t addr,
+			      kernel_ulong_t len);
 
 #ifdef USE_LIBUNWIND
 extern void unwind_init(void);
